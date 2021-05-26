@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+    postgres_ecommerce_user:
+        image: postgres:latest
+        ports:
+            - 5432:5432
+        env_file:
+            - ./.env
+        networks:
+            net_postgres:
+                ipv4_address: 172.16.18.4
+    ecommerce_user:
+        image: vinny1892/ecommerce_user
+        depends_on:
+            - postgres_ecommerce_user
+        env_file:
+            - ./.env
+        ports:
+            - 50051:50051
+        networks:
+            net_postgres:
+                ipv4_address: 172.16.18.3
+    ecommerce_api_gateway:
+        image: vinny1892/ecommerce_api_gateway
+        env_file:
+            - ./.env
+        ports:
+            - 3000:3000
+        networks:
+            net_postgres:
+                ipv4_address: 172.16.18.2
+networks:
+    net_postgres:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.16.18.0/24                                                                                                                               

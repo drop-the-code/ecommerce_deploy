@@ -3,9 +3,9 @@ services:
     postgres_ecommerce_user:
         image: postgres:latest
         ports:
-            - 5432:5432
+            - ${DB_PORT}:${DB_PORT}
         env_file:
-            - ./.env
+            - ./.env.ecommerce_user
         networks:
             net_postgres:
                 ipv4_address: 172.16.18.4
@@ -14,21 +14,37 @@ services:
         depends_on:
             - postgres_ecommerce_user
         env_file:
-            - ./.env
+            - ./.env.ecommerce_user
         ports:
-            - 50051:50051
+            - ${GRPC_PORT}:${GRPC_PORT}
         networks:
             net_postgres:
                 ipv4_address: 172.16.18.3
     ecommerce_api_gateway:
         image: vinny1892/ecommerce_api_gateway
         env_file:
-            - ./.env
+            - ./.env.ecommerce_api_gateway
         ports:
-            - 3000:3000
+            - ${PORT}:${PORT}
         networks:
             net_postgres:
                 ipv4_address: 172.16.18.2
+    # ecommerce_cart:
+    #     env_file:
+    #         - ./.env
+    #     ports:
+    #         - ${GRPC_PORT_ECOMMERCE_CART}:${GRPC_PORT_ECOMMERCE_CART}
+    #     networks:
+    #         net_postgres:
+    #             ipv4_address: 172.16.18.5
+    # ecommerce_product:
+    #     image:
+    #     env_file:
+    #         - ./.env
+    #     ports:
+    #         ${GRPC_PORT_ECOMMERCE_PURCHASE}:${GRPC_PORT_ECOMMERCE_PURCHASE}
+        
+
 networks:
     net_postgres:
         driver: bridge

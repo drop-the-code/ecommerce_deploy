@@ -1,12 +1,13 @@
 # Deploy Ecommerce
 
-# ecommerce-carrinho
-
 ## Sobre
 
-Trabalho de faculdade, onde este repositório é microsserviço de deploy para colocar em execução todos os microsserviços junto em um docker-compose.
+Trabalho de faculdade, onde este repositório é responsável por realizar deploy do projeto, colocando em execução todos os microsserviços junto em um orquestrador de container como docker-compose ou kubernetes, e futuramente na nuvem.
+ 
+O objetivo deste projeto é fazer sistema em micro serviços em diferentes linguagem usando gRPC para comunicação entre cada micro serviço e a api-gateway, onde todas as partes da aplicação estarão contidas em container docker com um orquestrador docker.
+ 
+Com essa aplicação obtivemos a experiência de desenvolver com diferentes linguagens e tecnologias, como o flutter para gerar o front-end podendo o "build" tanto para aplicações web quanto mobile
 
-O objetivo deste projeto é fazer sistema em microserviços em diferentes linguagem usando gRPC para comunicação entre cada microserviço e a api-gateway. Desenvolvendo a experiencia em lidar com diferentes linguagens e tecnologias, como o flutter para gerar o front-end podendo o "build" tanto para aplicações web quando mobile
 
 
 ## 🚀 Instalando Microserviço

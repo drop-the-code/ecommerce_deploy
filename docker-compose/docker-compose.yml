@@ -52,7 +52,7 @@ services:
         networks:
             net_postgres:
                 ipv4_address: 172.70.18.6
-    ecommerce_product_db:
+    db:
         image: "mcr.microsoft.com/mssql/server:2019-latest"
         environment:
             - ACCEPT_EULA=Y
@@ -65,7 +65,7 @@ services:
         ports:
             - "5000:5000"
         depends_on:
-            - ecommerce_product_db
+            - db
         networks:
             net_postgres:
                 ipv4_address: 172.70.18.17

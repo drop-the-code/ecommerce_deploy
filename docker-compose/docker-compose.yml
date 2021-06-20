@@ -59,16 +59,17 @@ services:
             - SA_PASSWORD=<YourStrong@Passw0rd>
         networks:
             net_postgres:
-                ipv4_address: 172.70.18.14
+                ipv4_address: 172.70.18.8
     ecommerce_product:
         image: vinny1892/ecommerce_product
         ports:
-            - "5000:5000"
+            - 5000:5000
         depends_on:
             - db
         networks:
             net_postgres:
-                ipv4_address: 172.70.18.17
+                ipv4_address: 172.70.18.9
+                            
     ecommerce_frontend:
         image: vinny1892/ecommerce_frontend
         ports:

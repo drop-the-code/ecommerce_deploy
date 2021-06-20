@@ -13,7 +13,7 @@ services:
     ecommerce_user:
         image: vinny1892/ecommerce_user
         depends_on:
-            - postgres_ecommerce_user
+            - ecommerce_user_postgres
         env_file:
             - .env
             - user.env

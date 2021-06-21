@@ -70,6 +70,13 @@ services:
         networks:
             net_postgres:
                 ipv4_address: 172.70.18.9
+    ecommerce_frontend:
+        image: vinny1892/ecommerce_frontend
+        ports:
+            - 8080:80
+        networks:
+            net_postgres:
+                ipv4_address: 172.70.18.22
                 
 networks:
     net_postgres:

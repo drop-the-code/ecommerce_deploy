@@ -6,7 +6,7 @@ services:
             - ${DB_PORT}:${DB_PORT}
         env_file:
             - .env
-            - environments/user.env
+            - user.env
         networks:
             net_postgres:
                 ipv4_address: 172.70.18.4
@@ -16,7 +16,7 @@ services:
             - ecommerce_user_postgres
         env_file:
             - .env
-            - environments/user.env
+            - user.env
         ports:
             - ${GRPC_PORT_USER}:${GRPC_PORT_USER}
         networks:
@@ -26,6 +26,7 @@ services:
         image: vinny1892/ecommerce_api_gateway
         env_file:
             - .env
+            - gateway.env
         ports:
             - ${PORT}:${PORT}
         networks:
@@ -37,7 +38,7 @@ services:
             - ecommerce_cart_mongo
         env_file:
             - .env
-            - environments/cart.env
+            - cart.env
         ports:
             - ${GRPC_PORT_CART}:${GRPC_PORT_CART}
         networks:
@@ -47,7 +48,7 @@ services:
         image: vinny1892/ecommerce_mongo_cart
         env_file:
             - .env
-            - environments/cart.env
+            - cart.env
         ports:
             - ${MONGO_PORT}:${MONGO_PORT}
         networks:

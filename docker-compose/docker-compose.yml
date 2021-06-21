@@ -6,7 +6,7 @@ services:
             - ${DB_PORT}:${DB_PORT}
         env_file:
             - .env
-            - postgres.env
+            - environments/user.env
         networks:
             net_postgres:
                 ipv4_address: 172.70.18.4
@@ -16,7 +16,7 @@ services:
             - ecommerce_user_postgres
         env_file:
             - .env
-            - user.env
+            - environments/user.env
         ports:
             - ${GRPC_PORT_USER}:${GRPC_PORT_USER}
         networks:
@@ -26,7 +26,6 @@ services:
         image: vinny1892/ecommerce_api_gateway
         env_file:
             - .env
-            - gateway.env
         ports:
             - ${PORT}:${PORT}
         networks:
@@ -34,9 +33,11 @@ services:
                 ipv4_address: 172.70.18.2
     ecommerce_cart:
         image: vinny1892/ecommerce_cart
+        depends_on:
+            - ecommerce_cart_mongo
         env_file:
             - .env
-            - cart.env
+            - environments/cart.env
         ports:
             - ${GRPC_PORT_CART}:${GRPC_PORT_CART}
         networks:
@@ -46,7 +47,7 @@ services:
         image: vinny1892/ecommerce_mongo_cart
         env_file:
             - .env
-            - cart.env
+            - environments/cart.env
         ports:
             - ${MONGO_PORT}:${MONGO_PORT}
         networks:
@@ -69,14 +70,7 @@ services:
         networks:
             net_postgres:
                 ipv4_address: 172.70.18.9
-                            
-    ecommerce_frontend:
-        image: vinny1892/ecommerce_frontend
-        ports:
-            - 8080:80
-        networks:
-            net_postgres:
-                ipv4_address: 172.70.18.29
+                
 networks:
     net_postgres:
         driver: bridge

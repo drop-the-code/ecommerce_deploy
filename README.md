@@ -10,10 +10,10 @@ Com essa aplicação obtivemos a experiência de desenvolver com diferentes ling
 
 ## Repositorios dos microsserviços
 
-       <a href="https://github.com/drop-the-code/ecommerce_product">Produto</a>
-        <a href="https://github.com/drop-the-code/ecommerce_cart">Carrinho</a>
-        <a href="https://github.com/drop-the-code/ecommerce_user" >Usuario</a>
-        <a href="https://github.com/drop-the-code/ecommerce_frontend">Frontend</a>
+       https://github.com/drop-the-code/ecommerce_product
+       https://github.com/drop-the-code/ecommerce_cart
+    https://github.com/drop-the-code/ecommerce_user
+       https://github.com/drop-the-code/ecommerce_frontend
 
 
 

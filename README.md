@@ -109,9 +109,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <td  align="center">
 <a  href="#">
-<img  src="https://avatars.githubusercontent.com/u/30512619?v=4"  width="100px;"  alt="Foto do Diego Bulhões no GitHub"/><br>
+<img  src="https://avatars.githubusercontent.com/u/40043611?v=4"  width="100px;"  alt="Foto do Rafael junio no GitHub"/><br>
 <sub>
-<b>Diego Bulhões</b>
+<b>Rafael Junio</b>
 </sub>
 </a>
 </td>

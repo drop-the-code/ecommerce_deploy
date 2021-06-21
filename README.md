@@ -8,6 +8,13 @@ O objetivo deste projeto é fazer sistema em micro serviços em diferentes lingu
  
 Com essa aplicação obtivemos a experiência de desenvolver com diferentes linguagens e tecnologias, como o flutter para gerar o front-end podendo o "build" tanto para aplicações web quanto mobile
 
+## Repositorios dos microsserviços
+
+       <a href="https://github.com/drop-the-code/ecommerce_product">Produto</a>
+        <a href="https://github.com/drop-the-code/ecommerce_cart">Carrinho</a>
+        <a href="https://github.com/drop-the-code/ecommerce_user" >Usuario</a>
+        <a href="https://github.com/drop-the-code/ecommerce_frontend">Frontend</a>
+
 
 
 ## 🚀 Instalando Microserviço
@@ -26,7 +33,7 @@ $ git clone https://github.com/drop-the-code/
 
 ```
 
-$ cd ecommerce_deploy
+$ cd ecommerce_deploy/docker-compose
 ```
 
 <br>

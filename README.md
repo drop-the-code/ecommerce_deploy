@@ -12,7 +12,7 @@ Com essa aplicação obtivemos a experiência de desenvolver com diferentes ling
 
        https://github.com/drop-the-code/ecommerce_product
        https://github.com/drop-the-code/ecommerce_cart
-    https://github.com/drop-the-code/ecommerce_user
+       https://github.com/drop-the-code/ecommerce_user
        https://github.com/drop-the-code/ecommerce_frontend
 
 

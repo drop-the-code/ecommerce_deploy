@@ -70,7 +70,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <br>
 
+<img src="https://github.com/drop-the-code/ecommerce-docs/blob/main/diagrama_ecommerce_gRPC_containers.png">
 
+<br>
 
 
 ## 🤝 Colaboradores
